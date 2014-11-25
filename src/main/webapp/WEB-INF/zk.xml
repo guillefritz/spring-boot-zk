@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+	<preference>
+		<name>org.zkoss.zk.ui.WebApp.name</name>
+		<value>zk boot</value>
+	</preference>
+	
+	<preference>
+		<name>ThreadLocal</name>
+		<value>
+			org.springframework.web.context.request.RequestContextHolder=requestAttributesHolder,inheritableRequestAttributesHolder;
+			org.springframework.security.context.ThreadLocalSecurityContextHolderStrategy=contextHolder
+		</value>
+	</preference>
+	
+	<library-property>
+		<name>org.zkoss.util.label.web.charset</name>
+		<value>ISO-8859-1</value>
+	</library-property>
+	<library-property>
+		<name>org.zkoss.util.label.classpath.charset</name>
+		<value>ISO-8859-1</value>
+	</library-property>
+	
+	<device-config>
+		<device-type>ajax</device-type>
+		<timeout-uri></timeout-uri>
+		<automatic-timeout/>
+	</device-config>
+	
+	<client-config>
+		<debug-js>false</debug-js>
+	</client-config>
+	
+	<listener>
+		<description>ThreadLocal Synchronization Listener</description>
+		<listener-class>org.zkoss.zkplus.util.ThreadLocalListener</listener-class>
+	</listener>
+	
+	<system-config>
+		<label-location>/WEB-INF/labels.properties</label-location>
+		<ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+	</system-config>
+
+	<library-property>
+    	<name>org.zkoss.web.preferred.locale</name>
+    	<value>es</value>
+	</library-property>
+</zk>

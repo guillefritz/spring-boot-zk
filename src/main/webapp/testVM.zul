@@ -1,0 +1,10 @@
+<zk xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.zkoss.org/2005/zul/zul.xsd">
+	<separator></separator>
+	<window vflex="true"  position="center" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('ar.gfritz.TestVM')">
+		<vlayout>
+			<label value="${labels.test.title}"/>
+			<label value="@load(vm.name)"/>
+			<button label="${labels.test.button}" onClick="@command('ook')"/>
+		</vlayout>
+	</window>
+</zk>
