@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.zkoss.zk.au.http.DHtmlUpdateServlet;
 import org.zkoss.zk.ui.http.DHtmlLayoutServlet;
+import org.zkoss.zk.ui.http.HttpSessionListener;
 
 @Configuration
 @ComponentScan("ar.gfritz")
@@ -54,6 +55,11 @@ public class Application {
 		reg.setLoadOnStartup(2);
 		reg.setInitParameters(params);
 		return reg;
+	}
+	
+	@Bean
+	public HttpSessionListener httpSessionListener() {
+		return new HttpSessionListener();
 	}
 
 }

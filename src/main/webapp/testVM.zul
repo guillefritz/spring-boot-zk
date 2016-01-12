@@ -5,6 +5,7 @@
 			<label value="${labels.test.title}"/>
 			<label value="@load(vm.name)"/>
 			<button label="${labels.test.button}" onClick="@command('ook')"/>
+			<a href="/logout">logout</a>
 		</vlayout>
 	</window>
 </zk>
